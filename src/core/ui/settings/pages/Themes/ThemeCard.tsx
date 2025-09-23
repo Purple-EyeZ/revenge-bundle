@@ -44,6 +44,9 @@ export default function ThemeCard({ item: theme }: CardWrapper<VdThemeInfo>) {
                     onPress: () => {
                         fetchTheme(theme.id, theme.selected).then(() => {
                             showToast(Strings.THEME_REFETCH_SUCCESSFUL, findAssetId("DownloadIcon"));
+                            if (themes[theme.id]?.selected) {
+                                selectTheme(themes[theme.id]);
+                            }
                         }).catch(() => {
                             showToast(Strings.THEME_REFETCH_FAILED, findAssetId("XSmallIcon"));
                         });

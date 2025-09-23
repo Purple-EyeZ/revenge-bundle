@@ -6,7 +6,6 @@ import { ColorManifest, InternalColorDefinition } from "./types";
 
 const tokenRef = findByProps("SemanticColor");
 const origRawColor = { ...tokenRef.RawColor };
-const AppearanceManager = findByPropsLazy("updateTheme");
 const ThemeStore = findByStoreNameLazy("ThemeStore");
 const FormDivider = findByPropsLazy("DIVIDER_COLORS");
 
@@ -27,7 +26,7 @@ export const _colorRef: InternalColorRef = {
     lastSetDiscordTheme: "darker"
 };
 
-export function updateBunnyColor(colorManifest: ColorManifest | null, { update = true }) {
+export function updateBunnyColor(colorManifest: ColorManifest | null) {
     if (settings.safeMode?.enabled) return;
 
     const internalDef = colorManifest ? parseColorManifest(colorManifest) : null;
@@ -49,11 +48,6 @@ export function updateBunnyColor(colorManifest: ColorManifest | null, { update =
                 ...tokenRef.SemanticColor[k][ref.current!.reference]
             };
         });
-    }
-
-    if (update) {
-        AppearanceManager.setShouldSyncAppearanceSettings(false);
-        AppearanceManager.updateTheme(internalDef != null ? ref.key : ref.lastSetDiscordTheme);
     }
 }
 

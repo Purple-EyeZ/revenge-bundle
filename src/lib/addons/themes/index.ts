@@ -4,6 +4,9 @@ import { getStoredTheme, getThemeFilePath, isPyonLoader, isThemeSupported } from
 import { awaitStorage as newAwaitStorage } from "@lib/api/storage";
 import { safeFetch } from "@lib/utils";
 import { Platform } from "react-native";
+import { showConfirmationAlert } from "@core/vendetta/alerts";
+import { BundleUpdaterManager } from "@lib/api/native/modules";
+import { Strings } from "@core/i18n";
 
 import initColors from "./colors";
 import { applyAndroidAlphaKeys, normalizeToHex } from "./colors/parser";
@@ -88,7 +91,7 @@ export async function fetchTheme(url: string, selected = false) {
 
     if (selected) {
         writeThemeToNative(themes[url]);
-        updateBunnyColor(themes[url].data, { update: true });
+        updateBunnyColor(themes[url].data);
     }
 }
 
@@ -97,19 +100,27 @@ export async function installTheme(url: string) {
     await fetchTheme(url);
 }
 
+export function promptReload() {
+    showConfirmationAlert({
+        title: Strings.MODAL_RELOAD_REQUIRED,
+        content: Strings.MODAL_RELOAD_REQUIRED_DESC,
+        confirmText: Strings.RELOAD,
+        cancelText: Strings.CANCEL,
+        onConfirm: () => BundleUpdaterManager.reload()
+    });
+}
+
 export function selectTheme(theme: VdThemeInfo | null, write = true) {
-    if (theme) theme.selected = true;
     Object.keys(themes).forEach(
         k => themes[k].selected = themes[k].id === theme?.id
     );
 
-    if (theme == null && write) {
-        updateBunnyColor(null, { update: true });
-        return writeThemeToNative({});
-    } else if (theme) {
-        updateBunnyColor(theme.data, { update: true });
-        return writeThemeToNative(theme);
-    }
+    if (!write) return;
+
+    updateBunnyColor(theme?.data ?? null);
+    writeThemeToNative(theme ?? {});
+
+    promptReload();
 }
 
 export async function removeTheme(id: string) {

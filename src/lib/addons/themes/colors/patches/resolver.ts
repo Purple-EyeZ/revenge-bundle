@@ -1,5 +1,4 @@
 import { _colorRef } from "@lib/addons/themes/colors/updater";
-import { NativeThemeModule } from "@lib/api/native/modules";
 import { before, instead } from "@lib/api/patcher";
 import { findByProps } from "@metro";
 import { byMutableProp } from "@metro/filters";
@@ -39,10 +38,9 @@ export default function patchDefinitionAndResolver() {
     const unpatches = [
         before("isThemeDark", isThemeModule, callback),
         before("isThemeLight", isThemeModule, callback),
-        before("updateTheme", NativeThemeModule, callback),
         instead("resolveSemanticColor", tokenReference.default.meta ?? tokenReference.default.internal, (args: any[], orig: any) => {
-            if (!_colorRef.current) return orig(...args);
-            if (args[0] !== _colorRef.key) return orig(...args);
+
+            if (!_colorRef.current || !args[1]) return orig(...args);
 
             args[0] = _colorRef.current.reference;
 
