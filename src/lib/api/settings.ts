@@ -11,6 +11,7 @@ export interface Settings {
         currentThemeId?: string;
     };
     enableEvalCommand?: boolean;
+    autoReloadOnThemeChange?: boolean;
 }
 
 export interface LoaderConfig {

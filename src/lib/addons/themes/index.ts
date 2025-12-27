@@ -13,6 +13,7 @@ import { applyAndroidAlphaKeys, normalizeToHex } from "./colors/parser";
 import { colorsPref } from "./colors/preferences";
 import { VendettaThemeManifest } from "./colors/types";
 import { updateBunnyColor } from "./colors/updater";
+import { settings } from "@lib/api/settings";
 
 export interface VdThemeInfo {
     id: string;
@@ -101,6 +102,11 @@ export async function installTheme(url: string) {
 }
 
 export function promptReload() {
+    if (settings.autoReloadOnThemeChange) {
+        BundleUpdaterManager.reload();
+        return;
+    }
+
     showConfirmationAlert({
         title: Strings.MODAL_RELOAD_REQUIRED,
         content: Strings.MODAL_RELOAD_REQUIRED_DESC,

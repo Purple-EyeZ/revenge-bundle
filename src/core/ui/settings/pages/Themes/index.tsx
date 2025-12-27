@@ -8,7 +8,7 @@ import { Author } from "@lib/addons/types";
 import { findAssetId } from "@lib/api/assets";
 import { settings } from "@lib/api/settings";
 import { useObservable } from "@lib/api/storage";
-import { ActionSheet, BottomSheetTitleHeader, Button, TableRadioGroup, TableRadioRow, TableRowIcon } from "@metro/common/components";
+import { ActionSheet, BottomSheetTitleHeader, Button, TableRadioGroup, TableRadioRow, TableRowGroup, TableRowIcon, TableSwitchRow } from "@metro/common/components";
 import { View } from "react-native";
 
 export default function Themes() {
@@ -44,6 +44,7 @@ export default function Themes() {
             CardComponent={ThemeCard}
             OptionsActionSheetComponent={() => {
                 useObservable([colorsPref]);
+                useProxy(settings);
 
                 return <ActionSheet>
                     <BottomSheetTitleHeader title="Options" />
@@ -74,6 +75,16 @@ export default function Themes() {
                             <TableRadioRow icon={<TableRowIcon source={findAssetId("ImageIcon")} />} label="Show" value={"shown"} />
                             <TableRadioRow icon={<TableRowIcon source={findAssetId("DenyIcon")} />} label="Hide" value={"hidden"} />
                         </TableRadioGroup>
+                        <TableRowGroup title="Options">
+                            <TableSwitchRow
+                                label="Auto Reload"
+                                subLabel="Automatically restart the app when a new theme is applied"
+                                value={settings.autoReloadOnThemeChange ?? false}
+                                onValueChange={(value) => {
+                                    settings.autoReloadOnThemeChange = value;
+                                }}
+                            />
+                        </TableRowGroup>
                     </View>
                 </ActionSheet>;
             }}
