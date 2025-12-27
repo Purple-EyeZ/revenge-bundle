@@ -39,27 +39,30 @@ export default function patchDefinitionAndResolver() {
         before("isThemeDark", isThemeModule, callback),
         before("isThemeLight", isThemeModule, callback),
         instead("resolveSemanticColor", tokenReference.default.meta ?? tokenReference.default.internal, (args: any[], orig: any) => {
+            const [requestedTheme, colorObj] = args;
+            if (!_colorRef.current || !colorObj) return orig(...args);
 
-            if (!_colorRef.current || !args[1]) return orig(...args);
+            // @ts-ignore
+            const propSymbol = colorObj[extractInfo._sym ??= Object.getOwnPropertySymbols(colorObj)[0]];
+            const semanticName = propSymbol;
 
-            args[0] = _colorRef.current.reference;
-
-            const [name, colorDef] = extractInfo(_colorRef.current!.reference, args[1]);
-
-            let semanticDef = _colorRef.current.semantic[name];
-            if (!semanticDef && _colorRef.current.spec === 2 && name in SEMANTIC_FALLBACK_MAP) {
-                semanticDef = _colorRef.current.semantic[SEMANTIC_FALLBACK_MAP[name]];
+            let semanticDef = _colorRef.current.semantic[semanticName];
+            if (!semanticDef && _colorRef.current.spec === 2 && semanticName in SEMANTIC_FALLBACK_MAP) {
+                semanticDef = _colorRef.current.semantic[SEMANTIC_FALLBACK_MAP[semanticName]];
             }
-
             if (semanticDef?.value) {
-                if (semanticDef.opacity === 1) return semanticDef.value;
                 return chroma(semanticDef.value).alpha(semanticDef.opacity).hex();
             }
 
-            const rawValue = _colorRef.current.raw[colorDef.raw];
-            if (rawValue) {
-                // Set opacity if needed
-                return colorDef.opacity === 1 ? rawValue : chroma(rawValue).alpha(colorDef.opacity).hex();
+            const nativeColorDef = tokenReference.SemanticColor[semanticName]?.[requestedTheme];
+            
+            if (nativeColorDef?.raw) {
+                const customRawValue = _colorRef.current.raw[nativeColorDef.raw];
+                if (customRawValue) {
+                    return nativeColorDef.opacity === 1
+                        ? customRawValue
+                        : chroma(customRawValue).alpha(nativeColorDef.opacity).hex();
+                }
             }
 
             // Fallback to default
