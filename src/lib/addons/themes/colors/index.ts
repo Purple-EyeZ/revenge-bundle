@@ -6,12 +6,13 @@ import { updateBunnyColor } from "./updater";
 
 /** @internal */
 export default function initColors(manifest: ColorManifest | null) {
+    if (manifest) updateBunnyColor(manifest);
+    
     const patches = [
         patchDefinitionAndResolver(),
         patchChatBackground()
     ];
 
-    if (manifest) updateBunnyColor(manifest);
 
     return () => patches.forEach(p => p());
 }
