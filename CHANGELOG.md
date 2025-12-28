@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/Purple-EyeZ/revenge-bundle/compare/v1.0.0...v1.0.1) (2025-12-28)
+
+
+### Bug Fixes
+
+* **themes:** correct discord interpreting all themes as light ([3d4e162](https://github.com/Purple-EyeZ/revenge-bundle/commit/3d4e162c0f81e058c4cda564ebd6a899deddd92c))
+
 # 1.0.0 (2025-12-28)
 
 
