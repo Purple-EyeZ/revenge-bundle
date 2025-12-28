@@ -1,3 +1,187 @@
+## [1.11.1-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.11.0...v1.11.1-dev.1) (2025-12-17)
+
+
+### Bug Fixes
+
+* **ui:** use default color for Text ([d585bce](https://github.com/revenge-mod/revenge-bundle/commit/d585bce8f58cdfe626a2e2e276149fc3eb075a1e))
+
+# [1.11.0](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.5...v1.11.0) (2025-12-17)
+
+
+### Bug Fixes
+
+* fix more colors ([b26b0db](https://github.com/revenge-mod/revenge-bundle/commit/b26b0dbd80cd16b08703c5f3688697b8dc5e34f8))
+* fixes for versions 309.5+ ([#215](https://github.com/revenge-mod/revenge-bundle/issues/215)) ([f20c37e](https://github.com/revenge-mod/revenge-bundle/commit/f20c37ea4ab9da3ed239bb9fa0d292393dcab187))
+* **fonts:** re-add FontPreview ([8fe6c41](https://github.com/revenge-mod/revenge-bundle/commit/8fe6c41dad8e9b7a63a72bf42f899a98a25365d6))
+* **fonts:** remove FontPreview ([8947785](https://github.com/revenge-mod/revenge-bundle/commit/8947785b609eaf892306a764b973260baa20853e))
+* remove Skia ([3b864fb](https://github.com/revenge-mod/revenge-bundle/commit/3b864fb9e6cee86e9a25c385065dd0fd960bea02))
+* **scripts:** fix \r for windows ([0c749f0](https://github.com/revenge-mod/revenge-bundle/commit/0c749f055794044e8ba4fd99680e3461764d26ab))
+* update colors for 309.5 ([961340c](https://github.com/revenge-mod/revenge-bundle/commit/961340c0f1159f3a813310d273f9f2030792985d))
+
+
+### Features
+
+* add `react-native-webview` ([7fcf051](https://github.com/revenge-mod/revenge-bundle/commit/7fcf0510256fcc715cda200368f3bdf25e52fadd))
+* **fonts:** memoize webview props ([a43af2c](https://github.com/revenge-mod/revenge-bundle/commit/a43af2cee9e43d989e39e59dd1c5ac9d7bdd12b4))
+* **scripts:** skip hermes in `serve` script ([1185b47](https://github.com/revenge-mod/revenge-bundle/commit/1185b47de6cb9111da7c054303e7acde1b027ae7))
+
+# [1.11.0-dev.3](https://github.com/revenge-mod/revenge-bundle/compare/v1.11.0-dev.2...v1.11.0-dev.3) (2025-12-17)
+
+
+### Features
+
+* **fonts:** memoize webview props ([a43af2c](https://github.com/revenge-mod/revenge-bundle/commit/a43af2cee9e43d989e39e59dd1c5ac9d7bdd12b4))
+
+# [1.11.0-dev.2](https://github.com/revenge-mod/revenge-bundle/compare/v1.11.0-dev.1...v1.11.0-dev.2) (2025-12-17)
+
+
+### Bug Fixes
+
+* **fonts:** re-add FontPreview ([8fe6c41](https://github.com/revenge-mod/revenge-bundle/commit/8fe6c41dad8e9b7a63a72bf42f899a98a25365d6))
+
+
+### Features
+
+* add `react-native-webview` ([7fcf051](https://github.com/revenge-mod/revenge-bundle/commit/7fcf0510256fcc715cda200368f3bdf25e52fadd))
+
+# [1.11.0-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.5...v1.11.0-dev.1) (2025-12-17)
+
+
+### Bug Fixes
+
+* fix more colors ([b26b0db](https://github.com/revenge-mod/revenge-bundle/commit/b26b0dbd80cd16b08703c5f3688697b8dc5e34f8))
+* **fonts:** remove FontPreview ([8947785](https://github.com/revenge-mod/revenge-bundle/commit/8947785b609eaf892306a764b973260baa20853e))
+* remove Skia ([3b864fb](https://github.com/revenge-mod/revenge-bundle/commit/3b864fb9e6cee86e9a25c385065dd0fd960bea02))
+* **scripts:** fix \r for windows ([0c749f0](https://github.com/revenge-mod/revenge-bundle/commit/0c749f055794044e8ba4fd99680e3461764d26ab))
+* update colors for 309.5 ([961340c](https://github.com/revenge-mod/revenge-bundle/commit/961340c0f1159f3a813310d273f9f2030792985d))
+
+
+### Features
+
+* **scripts:** skip hermes in `serve` script ([1185b47](https://github.com/revenge-mod/revenge-bundle/commit/1185b47de6cb9111da7c054303e7acde1b027ae7))
+
+## [1.10.5](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.4...v1.10.5) (2025-11-14)
+
+
+### Bug Fixes
+
+* **settings:** add missing import ([4bb3339](https://github.com/revenge-mod/revenge-bundle/commit/4bb333990edfdd6e9aa14a7e16e04c08c5438fde))
+
+## [1.10.4](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.3...v1.10.4) (2025-11-14)
+
+
+### Bug Fixes
+
+* **settings:** correct settings injecting into every menu  ([#211](https://github.com/revenge-mod/revenge-bundle/issues/211)) ([e261747](https://github.com/revenge-mod/revenge-bundle/commit/e2617470a80b2eba6eef750e622ad45b0dc63876))
+
+## [1.10.3](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.2...v1.10.3) (2025-11-14)
+
+
+### Bug Fixes
+
+* missing import in settings fix ([add81de](https://github.com/revenge-mod/revenge-bundle/commit/add81de302ee6198eabe194758807e129f3a7ef4))
+
+## [1.10.2](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.1...v1.10.2) (2025-11-14)
+
+
+### Bug Fixes
+
+* **settings:** add support for discord 306.4+ ([#208](https://github.com/revenge-mod/revenge-bundle/issues/208)) ([0076200](https://github.com/revenge-mod/revenge-bundle/commit/007620028e02511c37bfdfc538e3e5bc03034cde))
+
+## [1.10.2-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.1...v1.10.2-dev.1) (2025-11-14)
+
+
+### Bug Fixes
+
+* **settings:** add support for discord 306.4+ ([#208](https://github.com/revenge-mod/revenge-bundle/issues/208)) ([0076200](https://github.com/revenge-mod/revenge-bundle/commit/007620028e02511c37bfdfc538e3e5bc03034cde))
+
+## [1.10.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.10.0...v1.10.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* **i18n:** replace `Debugger` with `DevTools` ([6bab54a](https://github.com/revenge-mod/revenge-bundle/commit/6bab54afe2c71d607a11dbf46ae72bfe84aa7c5d))
+
+# [1.10.0](https://github.com/revenge-mod/revenge-bundle/compare/v1.9.0...v1.10.0) (2025-10-18)
+
+
+### Bug Fixes
+
+* **adb:** fix matching for multiple packages ([4279a88](https://github.com/revenge-mod/revenge-bundle/commit/4279a88b34fb6419ac1d71457349169f8864d632))
+* **build:** mark `node:util` as external ([7052fd1](https://github.com/revenge-mod/revenge-bundle/commit/7052fd181071f79449d4b695a9262d3feb45dbd8))
+* **build:** use wildcard instead of regex ([5d44e13](https://github.com/revenge-mod/revenge-bundle/commit/5d44e13bdde1e979e1c489fb254b78072c4f8a76))
+
+
+### Features
+
+* add autoconnect ([684e60f](https://github.com/revenge-mod/revenge-bundle/commit/684e60f52da6bc50b2d5f51099a39d9d143db26b))
+* **build:** update `external` package regex ([e21f365](https://github.com/revenge-mod/revenge-bundle/commit/e21f36546e59373d110987d7dd78f672977c6768))
+* improvements ([#204](https://github.com/revenge-mod/revenge-bundle/issues/204)) ([926fb1f](https://github.com/revenge-mod/revenge-bundle/commit/926fb1fa379341a4b8a0b63242e74bb5d4b287ff))
+* modernify all icons ([ac77de7](https://github.com/revenge-mod/revenge-bundle/commit/ac77de7820ae8390fadbf5793ee58af1d054866b))
+* reinstall devtools from npm ([0875e01](https://github.com/revenge-mod/revenge-bundle/commit/0875e01c3844724c6066581fa6bf3535b98f1a69))
+* **ui:** don't use `isDisabled` ([e5a6e60](https://github.com/revenge-mod/revenge-bundle/commit/e5a6e606125ad4b57c8e1e8a09c64a483296412b))
+
+# [1.10.0-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.9.0...v1.10.0-dev.1) (2025-10-18)
+
+
+### Bug Fixes
+
+* **adb:** fix matching for multiple packages ([4279a88](https://github.com/revenge-mod/revenge-bundle/commit/4279a88b34fb6419ac1d71457349169f8864d632))
+* **build:** mark `node:util` as external ([7052fd1](https://github.com/revenge-mod/revenge-bundle/commit/7052fd181071f79449d4b695a9262d3feb45dbd8))
+* **build:** use wildcard instead of regex ([5d44e13](https://github.com/revenge-mod/revenge-bundle/commit/5d44e13bdde1e979e1c489fb254b78072c4f8a76))
+
+
+### Features
+
+* add autoconnect ([684e60f](https://github.com/revenge-mod/revenge-bundle/commit/684e60f52da6bc50b2d5f51099a39d9d143db26b))
+* **build:** update `external` package regex ([e21f365](https://github.com/revenge-mod/revenge-bundle/commit/e21f36546e59373d110987d7dd78f672977c6768))
+* improvements ([#204](https://github.com/revenge-mod/revenge-bundle/issues/204)) ([926fb1f](https://github.com/revenge-mod/revenge-bundle/commit/926fb1fa379341a4b8a0b63242e74bb5d4b287ff))
+* modernify all icons ([ac77de7](https://github.com/revenge-mod/revenge-bundle/commit/ac77de7820ae8390fadbf5793ee58af1d054866b))
+* reinstall devtools from npm ([0875e01](https://github.com/revenge-mod/revenge-bundle/commit/0875e01c3844724c6066581fa6bf3535b98f1a69))
+* **ui:** don't use `isDisabled` ([e5a6e60](https://github.com/revenge-mod/revenge-bundle/commit/e5a6e606125ad4b57c8e1e8a09c64a483296412b))
+
+# [1.9.0](https://github.com/revenge-mod/revenge-bundle/compare/v1.8.1...v1.9.0) (2025-10-02)
+
+
+### Bug Fixes
+
+* Clear data -> Clear Data ([5b28d26](https://github.com/revenge-mod/revenge-bundle/commit/5b28d26db47c3783b9f447cb43bf8e47ac4b6673))
+* slash commands not sending messages ([#201](https://github.com/revenge-mod/revenge-bundle/issues/201)) ([db2be1c](https://github.com/revenge-mod/revenge-bundle/commit/db2be1ca7ccfed659a143d3ac38d8eec81e731b0))
+* update AssetId in Search component and AddonPage ([#200](https://github.com/revenge-mod/revenge-bundle/issues/200)) ([809214d](https://github.com/revenge-mod/revenge-bundle/commit/809214d082a294e52d260ed6a9fa034dea971c2c))
+
+
+### Features
+
+* enabled and disabled sort option for plugins ([#93](https://github.com/revenge-mod/revenge-bundle/issues/93)) ([388f2a6](https://github.com/revenge-mod/revenge-bundle/commit/388f2a632cfd07155aefb49902bd6174af8d467b))
+
+# [1.9.0-dev.2](https://github.com/revenge-mod/revenge-bundle/compare/v1.9.0-dev.1...v1.9.0-dev.2) (2025-10-02)
+
+
+### Bug Fixes
+
+* Clear data -> Clear Data ([5b28d26](https://github.com/revenge-mod/revenge-bundle/commit/5b28d26db47c3783b9f447cb43bf8e47ac4b6673))
+
+# [1.9.0-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.8.2-dev.2...v1.9.0-dev.1) (2025-10-02)
+
+
+### Features
+
+* enabled and disabled sort option for plugins ([#93](https://github.com/revenge-mod/revenge-bundle/issues/93)) ([388f2a6](https://github.com/revenge-mod/revenge-bundle/commit/388f2a632cfd07155aefb49902bd6174af8d467b))
+
+## [1.8.2-dev.2](https://github.com/revenge-mod/revenge-bundle/compare/v1.8.2-dev.1...v1.8.2-dev.2) (2025-10-02)
+
+
+### Bug Fixes
+
+* update AssetId in Search component and AddonPage ([#200](https://github.com/revenge-mod/revenge-bundle/issues/200)) ([809214d](https://github.com/revenge-mod/revenge-bundle/commit/809214d082a294e52d260ed6a9fa034dea971c2c))
+
+## [1.8.2-dev.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.8.1...v1.8.2-dev.1) (2025-09-26)
+
+
+### Bug Fixes
+
+* slash commands not sending messages ([#201](https://github.com/revenge-mod/revenge-bundle/issues/201)) ([db2be1c](https://github.com/revenge-mod/revenge-bundle/commit/db2be1ca7ccfed659a143d3ac38d8eec81e731b0))
+
 ## [1.8.1](https://github.com/revenge-mod/revenge-bundle/compare/v1.8.0...v1.8.1) (2025-07-24)
 
 
