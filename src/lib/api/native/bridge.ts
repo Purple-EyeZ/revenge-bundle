@@ -134,4 +134,5 @@ export interface Methods {
     'revenge.fs.write': [[path: string, contents: string], void];
     'revenge.alertError': [[error: string, version: string], null];
     'revenge.showRecoveryAlert': [[], void];
+    'revenge.updater.reload': [[], void];
 }
